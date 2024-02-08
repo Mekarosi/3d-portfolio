@@ -2,6 +2,7 @@ import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import Loader from '../components/Loader'
 import Office from '../models/office'
+import Sky from '../models/Sky'
 
 
 
@@ -40,7 +41,7 @@ const Home = () => {
           <pointLight />
           <spotLight />
           <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" /> 
-
+         <Sky />
          <Office  
           //  position= {officePosition}
           //  scale ={officeScale}
