@@ -3,6 +3,8 @@ import { Canvas } from '@react-three/fiber'
 import Loader from '../components/Loader'
 import Office from '../models/office'
 import Sky from '../models/Sky'
+import Bird from '../models/Bird'
+import Plane  from '../models/Plane'
 
 
 
@@ -41,12 +43,16 @@ const Home = () => {
           <pointLight />
           <spotLight />
           <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" /> 
+          
+         <Bird />
          <Sky />
+         <Plane />
          <Office  
           //  position= {officePosition}
           //  scale ={officeScale}
           //  rotation= {officeRotation}
          /> 
+        
         </Suspense>
       </Canvas>
     </section>
