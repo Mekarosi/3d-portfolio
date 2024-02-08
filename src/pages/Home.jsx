@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import { useState, Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import Loader from '../components/Loader'
 import Office from '../models/office'
@@ -13,6 +13,7 @@ import Plane  from '../models/Plane'
       </div> */}
 
 const Home = () => {
+  const [isRotating, setIsRotating] = useState(false )
 
   // const adjustOfficeForScreenSize  =  () => {
   //    let screenScale = null
@@ -28,13 +29,30 @@ const Home = () => {
   //    return [screenScale, screenPosition, rotation]
   // }
 
+  
 // const [officeScale, officePosition, officeRotation] = adjustOfficeForScreenSize()
+    const adjustPlaneForScreenSize  =  () => {
+     let screenScale, screenPosition 
+    
+
+     if(window.innerWidth < 768) {
+      screenScale = [1.5, 1.5, 1.5]
+      screenPosition= [0, -1.5, 0]
+     } else {
+      screenScale = [3, 3, 3]
+      screenPosition= [0, -4, -4]
+     }
+
+     return [screenScale, screenPosition]
+  }
+
+const [planeScale, planePosition, ] = adjustPlaneForScreenSize()
 
   return (
-    <section className='w-full h-screen relative '>
+    <section className='w-full h-screen relative '> 
       
       <Canvas 
-        className='w-full h-screen bg-transparent'
+        className={`w-full h-screen bg-transparent ${isRotating  ? 'cursor-grabbing' : 'cursor-grab'}`}
         camera={{ near: 0.1, far: 1000 }}
       >
          <Suspense fallback={<Loader />}>
@@ -46,12 +64,19 @@ const Home = () => {
           
          <Bird />
          <Sky />
-         <Plane />
          <Office  
           //  position= {officePosition}
           //  scale ={officeScale}
           //  rotation= {officeRotation}
+         isRotating={isRotating}
+         setIsRotating={setIsRotating}
          /> 
+          <Plane 
+            isRotating={isRotating}
+            planeScale={planeScale}
+            planePosition={planePosition}
+            rotation={[0, 20, 0]}
+         />
         
         </Suspense>
       </Canvas>
