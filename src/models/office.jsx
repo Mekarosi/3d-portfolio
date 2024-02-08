@@ -12,7 +12,7 @@ import { useFrame, useThree } from "@react-three/fiber";
 import { a } from '@react-spring/three'
 
 import officeScene from '../assets/3d/office.glb'
- 
+  
 
 const Office = (props) => {
     const OfficeRef = useRef()
