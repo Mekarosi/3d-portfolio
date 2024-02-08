@@ -16,7 +16,7 @@ import officeScene from '../assets/3d/office.glb'
 
 const Office = (props) => {
     const OfficeRef = useRef()
-  const { nodes, materials } = useGLTF("/gaming_room_free_download.glb");
+  const { nodes, materials } = useGLTF(officeScene);
   return (
     <a.group ref= {OfficeRef} {...props}>
       <a.group rotation={[-Math.PI / 2, 0, 0]} scale={0.006}>
