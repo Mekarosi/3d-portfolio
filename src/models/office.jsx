@@ -6,7 +6,7 @@ Source: https://sketchfab.com/3d-models/gaming-room-free-download-1e5aa44bd35d4b
 Title: gaming room FREE DOWNLOAD
 */
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber"; 
 import { a } from '@react-spring/three'
@@ -14,8 +14,9 @@ import { a } from '@react-spring/three'
 import officeScene from '../assets/3d/office.glb'
   
 
-const Office = ({ isRotating, setIsRotating, ...props }) => {
+const Office = ({ isRotating, setIsRotating,setCurrentStage, ...props }) => {
     const officeRef = useRef()
+  
   
   
     const { gl, viewport } = useThree()
@@ -41,24 +42,23 @@ const Office = ({ isRotating, setIsRotating, ...props }) => {
       e.stopPropagation()
       e.preventDefault()
       setIsRotating(false)
-
-      const clientX = e.touches 
-      ? e.touches[0].clientX 
-      : e.clientX
-
-      const delta = (clientX - lastX.current) /viewport.width 
- 
-      officeRef.current.rotation.y += delta * 0.01 * Math.PI
-      lastX.current = clientX
-      rotationSpeed.current = delta * 0.01 * Math.PI
     }
 
     const handlePointerMove = (e) => {
       e.stopPropagation()
       e.preventDefault()
 
-      if(isRotating) handlePointerUp(e)
-  
+      if(isRotating) {
+        const clientX = e.touches 
+      ? e.touches[0].clientX 
+      : e.clientX
+
+      const delta = (clientX - lastX.current) /viewport.width 
+ 
+        officeRef.current.rotation.y += delta * 0.01 * Math.PI
+        lastX.current = clientX
+        rotationSpeed.current = delta * 0.01 * Math.PI
+      }
     }
 
    const handleKeyDown = (e) => {
@@ -80,10 +80,11 @@ const Office = ({ isRotating, setIsRotating, ...props }) => {
  useFrame(() => {
    if(!isRotating){
      rotationSpeed.current *= dampingFactor
-
+ 
      if(Math.abs(rotationSpeed.current) < 0.001){
        rotationSpeed.current = 0
      }
+    officeRef.current.rotation.y += rotationSpeed.current
    } else {
     const rotation = officeRef.current.rotation.y
  
@@ -129,16 +130,16 @@ const Office = ({ isRotating, setIsRotating, ...props }) => {
 
 useEffect(() => {
   const canvas = gl.domElement
-  canvas.document.addEventListener('pointerdown', handlePointerDown)
-  canvas.document.addEventListener('pointerup', handlePointerUp)
-  canvas.document.addEventListener('pointermove', handlePointerMove)
+  canvas.addEventListener("pointerdown", handlePointerDown)
+  canvas.addEventListener('pointerup', handlePointerUp)
+  canvas.addEventListener('pointermove', handlePointerMove)
   document.addEventListener('keyup', handleKeyUp)
   document.addEventListener('keydown', handleKeyDown)
  
   return () => {
-    canvas.document.removeEventListener('pointerdown', handlePointerDown)
-    canvas.document.removeEventListener('pointerup', handlePointerUp)
-    canvas.document.removeEventListener('pointermove', handlePointerMove)
+    canvas.removeEventListener('pointerdown', handlePointerDown)
+    canvas.removeEventListener('pointerup', handlePointerUp)
+    canvas.removeEventListener('pointermove', handlePointerMove)
     document.removeEventListener('keyup', handleKeyUp)
     document.removeEventListener('keydown', handleKeyDown)
   }
