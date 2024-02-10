@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {arrow} from '../assets/icons/'
+
 const InfoBox = ({ text, link, btnText }) => (
     <div className='info-box'>
         <p className='font-medium sm:text-xl text-center'>{text}</p>
@@ -29,10 +30,20 @@ const renderContent = {
     ), 
         
     3: (
-        <h1>3</h1>
+        <InfoBox 
+        text='Worked on multiple projects over the year. Curious
+        about the impact?'
+        link='/projects'
+        btnText='Visit my portfolio'
+     />
     ),
    4 : ( 
-        <h1>4</h1> 
+    <InfoBox 
+    text="Need a project done or looking for a dev? I'm just a few 
+    keystrokes away"
+    link='/contact'
+    btnText="Let's talk"
+ />
     )           
 }
 
