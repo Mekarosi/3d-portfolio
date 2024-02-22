@@ -1,9 +1,9 @@
 import React from 'react'
-// import  {VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-// import 'react-vertical-timeline-component/style.min.css';
+import 'react-vertical-timeline-component/style.min.css';
 import { Chrono } from "react-chrono";
 
 import { skills, experiences } from '../constants' 
+import CTA from '../components/CTA';
 
 const About = () => {
   return (
@@ -22,10 +22,10 @@ const About = () => {
 
         <div className='mt-16 flex flex-wrap gap-12'>
           {skills.map((skill) => (
-            <div className='block-container w-20 h-20'>
+            <div key={skill.name} className='block-container w-20 h-20'>
               <div className='btn-back rounded-xl' />
               <div className='btn-front rounded-xl flex justify-center items-center'>
-                <img 
+                <img  
                   src={skill.imageUrl}
                   alt={skill.name}
                   className='w-1/2 h-1/2 object-contain'
@@ -41,20 +41,12 @@ const About = () => {
         <p>I've worked with all sorts of companies, leveling up my Skills and teaming up with smart people. Here's the rundown:</p>
       </div>
       <div className='mt-12 flex'>
-        {/* <VerticalTimeline>
-          {experiences.map((experience) => (
-            <VerticalTimelineElement>
-              <div>
-                <h3>{experience.title}</h3>
-              </div>
-            </VerticalTimelineElement>
-          ))}
-        </VerticalTimeline> */}
+   
           <Chrono mode="VERTICAL" >
           {experiences.map((experience) => (
               <div key={experience.company_name} date={experience.date}>
                 <h3 className='text-black text-xl font-poppins font-semibold' >{experience.title}</h3>
-                <p className='text-black-500 font-medium font-base' style={{margin:0}}>{experience.company_name}</p>
+                <p className='text-black-500 font-medium font-base'>{experience.company_name}</p>
                 
                 <div className="chrono-icons w-[4%] h-[4%] object-contain mb-3">
                   <img src={experience.icon} alt={experience.company_name} />
@@ -80,11 +72,14 @@ const About = () => {
           ))}
                
 
-          </Chrono>
+          </Chrono> 
         
        
       </div>
       </div>
+
+      <hr className='border-slate-200'/>
+     <CTA />
     </section>
   )
 }
