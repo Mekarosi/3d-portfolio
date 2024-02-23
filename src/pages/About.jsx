@@ -2,7 +2,7 @@ import React from 'react'
 import 'react-vertical-timeline-component/style.min.css';
 import { Chrono } from "react-chrono";
 
-import { skills, experiences } from '../constants' 
+import { skills, experiences, socialLinks } from '../constants' 
 import CTA from '../components/CTA';
 
 const About = () => {
@@ -15,7 +15,8 @@ const About = () => {
       </h1>
       
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
-        <p>Software Engineer based in Nigeria, specialized in building full stack applications through hands-on implementation</p>
+        <p>A Software Engineer based in Nigeria who is always seeking for better ways to getting things done. A graduate of process engineer from  
+         from University of Lagos, Nigeria. I am specialized in building full stack applications through hands-on implementation</p>
       </div>
       <div className='py-10 flex flex-col'>
         <h3 className='subhead-text'>My Skills</h3>
@@ -35,6 +36,27 @@ const About = () => {
           ))}
         </div>
       </div>
+
+      <div className='py-10 flex flex-col'>
+        <h3 className='subhead-text'>My Social Media Links</h3>
+
+        <div className='mt-16 flex flex-wrap gap-12'>
+          {socialLinks.map((socialLink) => (
+            <div key={socialLink.name} className='block-container w-20 h-20'>
+              <div className='btn-back rounded-xl' />
+              <div className='btn-front rounded-xl flex justify-center items-center'>
+                <img  
+                  src={socialLink.iconUrl}
+                  alt={socialLink.name}
+                  className='w-1/2 h-1/2 object-contain'
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+
       <div className='py-16'>
         <h3 className='subhead-text'>Work Experience</h3>
         <div className='mt-5 flex flex-col gap-3 text-slate-500'>

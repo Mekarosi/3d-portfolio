@@ -23,7 +23,10 @@ import {
     summiz,
     tailwindcss,
     threads,
-    typescript
+    typescript,
+    twitter,
+    dev,
+    facebook
 } from "../assets/icons";
 
 export const skills = [
@@ -166,20 +169,36 @@ export const experiences = [
 
 export const socialLinks = [
     {
-        name: 'Contact',
-        iconUrl: contact,
-        link: '/contact',
-    },
-    {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/Mekarosi',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://www.linkedin.com/in/mekarosi-assa-5b268516b',
+    },
+    {
+        name: 'X',
+        iconUrl: twitter,
+        link: 'https://twitter.com/MercyAssa',
+    },
+    {
+        name: 'DEV.io',
+        iconUrl: dev,
+        link: 'https://dev.to/mekarosi',
+    },
+    {
+        name: 'Instagram',
+        iconUrl: instagram,
+        link: 'https://www.instagram.com/kidslovecode/',
+    },
+    {
+        name: 'Facebook',
+        iconUrl: facebook,
+        link: 'https://web.facebook.com/mercy.assa',
     }
+   
 ];
 
 export const projects = [
