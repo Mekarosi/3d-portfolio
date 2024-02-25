@@ -49,6 +49,8 @@ const Projects = () => {
 >
   Live Link
 </Link>
+<br />
+
 <img 
   src={arrow}
   alt='arrow'
@@ -56,6 +58,21 @@ const Projects = () => {
 
 />
 </div>
+
+<div className='mt-5 flex items-center gap-2 font-poppins'>
+
+<button
+  className="btn"
+  onClick={(e) => {
+    e.preventDefault();
+    window.location.href=`${project.preview}`
+    }}
+>
+ Preview
+</button>
+
+</div>
+
               </div>
             </div>
           

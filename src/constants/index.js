@@ -25,9 +25,18 @@ import {
     threads,
     typescript,
     twitter,
-    dev,
-    facebook
+    
+    
 } from "../assets/icons";
+
+import facebook  from "../assets/extras/facebook.png"
+import instagram  from "../assets/extras/instagram.png"
+import dev  from "../assets/extras/dev.png"
+import coding  from "../assets/extras/coding.png"
+import crypto  from "../assets/extras/crypto.png"
+import family  from "../assets/extras/family.png"
+import aeroplane  from "../assets/extras/aeroplane.png"
+import ror  from "../assets/extras/ror.png"
 
 export const skills = [
     {
@@ -65,21 +74,21 @@ export const skills = [
         name: "MongoDB",
         type: "Database",
     },
-    {
-        imageUrl: motion,
-        name: "Motion",
-        type: "Animation",
-    },
+    // {
+    //     imageUrl: motion,
+    //     name: "Motion",
+    //     type: "Animation",
+    // },
     {
         imageUrl: mui,
         name: "Material-UI",
         type: "Frontend",
     },
-    {
-        imageUrl: nextjs,
-        name: "Next.js",
-        type: "Frontend",
-    },
+    // {
+    //     imageUrl: nextjs,
+    //     name: "Next.js",
+    //     type: "Frontend",
+    // },
     {
         imageUrl: nodejs,
         name: "Node.js",
@@ -106,32 +115,32 @@ export const skills = [
         type: "Frontend",
     },
     {
-        imageUrl: typescript,
-        name: "TypeScript",
-        type: "Frontend",
+        imageUrl: ror,
+        name: "Ruby on Rails",
+        type: "Full stack",
     }
 ];
 
 export const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
+        title: "Full-stack Developer",
+        company_name: "Midland Digital Solutions",
         icon: starbucks,
         iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
+        date: "June 2021 - Jan 2022",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
+            "Developing and maintaining web applications using React.js for frontend and Nodejs for backend.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
             "Implementing responsive design and ensuring cross-browser compatibility.",
             "Participating in code reviews and providing constructive feedback to other developers.",
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
+        title: "React Developer",
+        company_name: "Cohit",
+        icon: shopify,
         iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
+        date: "Feb 2021 - June 2022",
         points: [
             "Developing and maintaining web applications using React.js and other related technologies.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -140,11 +149,11 @@ export const experiences = [
         ],
     },
     {
-        title: "Web Developer",
-        company_name: "Shopify",
+        title: "Web Developer(Remote)",
+        company_name: "Health4Humanity Inc",
         icon: shopify,
         iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
+        date: "May 2020 - Jan 2021",
         points: [
             "Developing and maintaining web applications using React.js and other related technologies.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -152,19 +161,7 @@ export const experiences = [
             "Participating in code reviews and providing constructive feedback to other developers.",
         ],
     },
-    {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
-        iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
+    
 ];
 
 export const socialLinks = [
@@ -202,46 +199,56 @@ export const socialLinks = [
 ];
 
 export const projects = [
+
+
     {
-        iconUrl: pricewise,
+        iconUrl: crypto,
         theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
-    },
-    {
-        iconUrl: threads,
-        theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
-    },
-    {
-        iconUrl: car,
-        theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
-    },
-    {
-        iconUrl: snapgram,
-        theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
+        name: 'Cryptoverse',
+        description: "A cryptocurrency app built with react and antD that consumes an api to display information about all you need to know regarding cryptocurrency.",
+        preview: 'https://crypto-app122.netlify.app/',
+        link: 'https://github.com/Mekarosi/cryptoverse'
     },
     {
         iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
+        theme: 'btn-back-green',
+        name: 'Real Estate App',
+        description: "A real estate app that consumes an api where users can search for properties to rent and buy.",
+        preview: 'https://realestate-app-henna.vercel.app/',
+        link: 'https://github.com/Mekarosi/real_estate_app'
+    },
+    
+    {
+        iconUrl: family,
+        theme: 'btn-back-blue',
+        name: 'Contact Keeper',
+        description: 'An app for keeping connects of friends',
+        preview: 'http://desolate-waters-70900.herokuapp.com/',
+        link: 'https://github.com/Mekarosi/contact-keeper'
+    },
+    {
+        iconUrl: coding,
+        theme: 'btn-back-pink',
+        name: 'DevMatch App',
+        description: "A developer's social-networking app, built with MERN stack, allowing users to connect with friends in a familiar social media environment.",
+        preview: 'https://devmatch-cdju.onrender.com/',
+        link: 'https://github.com/Mekarosi/dematch_frontend'
+    },
+  
+    {
+        iconUrl: aeroplane,
+        theme: 'btn-back-yellow',
+        name: 'Open flight app',
+        description: "An app for reviewing customers' experience with airlines, built with React.js for frontend and ruby on rails for backend respectively.",
+        preview: 'https://open-flights101.herokuapp.com/',
+        link: 'https://github.com/Mekarosi/open-flight-app'
     },
     {
         iconUrl: summiz,
         theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+        name: 'Github Finder App',
+        description: " An app for finding developers by username on Github, built with MERN stack",
+        preview: 'https://vibrant-carson-812949.netlify.app/',
+        link: 'https://github.com/Mekarosi/open-flight-app'
     }
 ];

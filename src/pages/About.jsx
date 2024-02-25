@@ -42,7 +42,14 @@ const About = () => {
 
         <div className='mt-16 flex flex-wrap gap-12'>
           {socialLinks.map((socialLink) => (
-            <div key={socialLink.name} className='block-container w-20 h-20'>
+            <div 
+            key={socialLink.name} 
+            className='block-container w-20 h-20 cursor-pointer'
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href=`${socialLink.link}`
+              }}
+            >
               <div className='btn-back rounded-xl' />
               <div className='btn-front rounded-xl flex justify-center items-center'>
                 <img  
