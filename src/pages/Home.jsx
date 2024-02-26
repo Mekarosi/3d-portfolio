@@ -14,7 +14,7 @@ import Plane  from '../models/Plane'
 
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false )
-
+  const [CurrentStage, setCurrentStage] = useState(1)
   // const adjustOfficeForScreenSize  =  () => {
   //    let screenScale = null
   //    let screenPosition = [0, -6.5, -43]
@@ -63,13 +63,14 @@ const [planeScale, planePosition, ] = adjustPlaneForScreenSize()
           <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" /> 
           
          <Bird />
-         <Sky />
+         <Sky isRotating={isRotating}/>
          <Office  
           //  position= {officePosition}
           //  scale ={officeScale}
           //  rotation= {officeRotation}
          isRotating={isRotating}
          setIsRotating={setIsRotating}
+         setCurrentStage={setCurrentStage}
          /> 
           <Plane 
             isRotating={isRotating}
