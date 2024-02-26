@@ -65,10 +65,12 @@ const Office = ({ isRotating, setIsRotating,setCurrentStage, ...props }) => {
       if(e.key === 'ArrowLeft'){ 
       if(!isRotating) setIsRotating(true)
       officeRef.current.rotation.y += 0.01 * Math.PI
-   }  else if(e.key === 'ArrowRight') {
+      rotationSpeed.current = 0.0125
+    }  else if(e.key === 'ArrowRight') {
       if(!isRotating) setIsRotating(true)
       officeRef.current.rotation.y -= 0.01 * Math.PI
-   }
+      rotationSpeed.current = -0.0125
+    }
   }
 
   const handleKeyUp = () => {

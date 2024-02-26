@@ -5,9 +5,9 @@ import Navbar from './components/Navbar'
 
 const App = () => {
   return ( 
-    <main className="bg-slate-300/20">
+    <main className="bg-slate-300/20 h-full">
       <Router>
-        <Navbar />
+        <Navbar />  
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
