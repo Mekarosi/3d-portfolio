@@ -65,29 +65,41 @@ const About = () => {
 
 
       <div className='py-16'>
-        <h3 className='subhead-text'>Work Experience</h3>
+        <h3 className='subhead-text'>Work Experience / Training</h3>
         <div className='mt-5 flex flex-col gap-3 text-slate-500'>
-        <p>I've worked with all sorts of companies, leveling up my Skills and teaming up with smart people. Here's the rundown:</p>
+        <p>My work experiences and trainings has enabled me to level up my Skills and team up with smart people. Here's the rundown:</p>
       </div>
       <div className='mt-12 flex'>
    
-          <Chrono mode="VERTICAL" >
+          <Chrono 
+          mode="VERTICAL" 
+          items={experiences} 
+          slideShow
+          slideItemDuration={2500}
+          slideShowType="slide_from_sides"
+          theme={{
+            primary: '#EDC21F',
+            secondary: '#F0EEBD',
+            cardBgColor: '#EFEEEC',
+            titleColor: 'black',
+            titleColorActive: '#1E1BEF',
+          }}
+          >
           {experiences.map((experience) => (
-              <div key={experience.company_name} date={experience.date}>
+              <div key={experience.cardSubtitle} cardTitle={experience.cardTitle}>
                 <h3 className='text-black text-xl font-poppins font-semibold' >{experience.title}</h3>
-                <p className='text-black-500 font-medium font-base'>{experience.company_name}</p>
+                <p className='text-black-500 font-medium font-base'>{experience.cardSubtitle}</p>
                 
                 <div className="chrono-icons w-[4%] h-[4%] object-contain mb-3">
-                  <img src={experience.icon} alt={experience.company_name} />
+                  <img src={experience.icon} alt={experience.cardSubtitle} />
                 </div>
-                {experience.date}
+                {experience.cardTitle}
                 <ul className='my-5 list-disc ml-5 space-y-2'>
             {experience.points.map((point, index) => (
               <li 
                 className='text-black font-normal pl-1 text-sm'
                 key={`experience-point-${index}`}
-                >
-                
+                >  
                 {point}
                 <br />
                 

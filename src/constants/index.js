@@ -39,7 +39,8 @@ import aeroplane  from "../assets/extras/aeroplane.png"
 import ror from "../assets/extras/ror.png" 
 import cohit from "../assets/extras/cohit.JPG" 
 import h4h from "../assets/extras/h4h.JPG" 
-import midland from "../assets/extras/midland.JPG" 
+import midland from "../assets/extras/midland.JPG"
+import bootcamp from "../assets/extras/bootcamp.JPG"  
 
 
 export const skills = [
@@ -126,12 +127,25 @@ export const skills = [
 ];
 
 export const experiences = [
+    // {
+    //     title: "Full-stack Developer",
+    //     company_name: "Midland Digital Solutions",
+    //     icon: midland,
+    //     iconBg: "#accbe1",
+    //     date: "June 2021 - Jan 2022",
+    //     points: [
+    //         "Developing and maintaining web applications using React.js for frontend and Nodejs for backend.",
+    //         "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+    //         "Implementing responsive design and ensuring cross-browser compatibility.",
+            
+    //     ],
+    // },
     {
         title: "Full-stack Developer",
-        company_name: "Midland Digital Solutions",
+        cardTitle: "June 2021 - Jan 2022",
+        cardSubtitle: "Midland Digital Solutions",
         icon: midland,
         iconBg: "#accbe1",
-        date: "June 2021 - Jan 2022",
         points: [
             "Developing and maintaining web applications using React.js for frontend and Nodejs for backend.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -141,27 +155,63 @@ export const experiences = [
     },
     {
         title: "React Developer",
-        company_name: "Cohit",
+        cardTitle: "Feb 2021 - June 2022",
+        cardSubtitle: "Cohit",
         icon: cohit,
         iconBg: "#fbc3bc",
-        date: "Feb 2021 - June 2022",
         points: [
             "Design and implementation of user interfaces (UIs) and UI components using React, a front-end JavaScript library.",
             "Collaborating with back-end developers and web designers to improve usability",
             "Participating in code reviews and providing constructive feedback to other developers.",
+            "Managing application programming interfaces (APIs).",
             "Implementation of SEO principles"
         ],
     },
     {
         title: "Web Developer(Remote)",
-        company_name: "Health4Humanity Inc",
+        cardTitle: "May 2020 - Jan 2021",
+        cardSubtitle: "Health4Humanity Inc",
         icon: h4h,
-        iconBg: "#b7e4c7",
-        date: "May 2020 - Jan 2021",
+        iconBg: "#b7e4c7", 
         points: [
             "Using markup languages like HTML to create user-friendly web pages",
             "Maintaining and improving website",
             "Implementing responsive design and ensuring cross-browser compatibility.",
+           
+        ],
+    },
+    {
+        title: "Software Developer",
+        cardTitle: "May 2019 - August 2019",
+        cardSubtitle: "NESA by Makers",
+        icon: bootcamp,
+        iconBg: "#b7e4c7", 
+        points: [
+            "A 4 months intensive coding Bootcamp for full stack developer",
+            "Understand and implement frameworks like Jquery, ReactJs, NodeJs, ExpressJs",
+            "Implement proper collaboration skills",
+            "Using markup languages like HTML to create user-friendly web pages",
+            "Designing, building, and managing Ruby code.",
+            "Incorporating data storage into valuable solutions.",
+            "Identifying and understanding programming challenges and providing reliable solutions",
+            "Understanding the MVC paradigm",
+            "Proper implementation of Git commands"
+           
+        ],
+    },
+    {
+        title: "Ruby on Rails Developer",
+        cardTitle: "April 2018- till date",
+        cardSubtitle: "Self taught/ Training",
+        icon: ror,
+        iconBg: "#b7e4c7", 
+        points: [
+            "Using markup languages like HTML to create user-friendly web pages",
+            "Designing, building, and managing Ruby code.",
+            "Incorporating data storage into valuable solutions.",
+            "Identifying and understanding programming challenges and providing reliable solutions",
+            "Understanding the MVC paradigm",
+            "Proper implementation of Git commands"
            
         ],
     },

@@ -73,7 +73,7 @@ const Office = ({ isRotating, setIsRotating,setCurrentStage, ...props }) => {
     }
   }
 
-  const handleKeyUp = () => {
+  const handleKeyUp = (e) => {
     if(e.key === 'ArrowLeft' || e.key === 'ArrowRight'){
        setIsRotating(false)
     }
