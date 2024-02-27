@@ -271,6 +271,14 @@ export const projects = [
         preview: 'https://realestate-app-henna.vercel.app/',
         link: 'https://github.com/Mekarosi/real_estate_app'
     },
+    {
+        iconUrl: estate,
+        theme: 'btn-back-green',
+        name: 'Cocktail App',
+        description: "A cocktail app that consumes an api where users can search for cocktails.",
+        preview: 'https://cocktail-drinks-app.netlify.app/',
+        link: 'https://github.com/Mekarosi/cocktail-app'
+    },
     
     {
         iconUrl: family,
@@ -304,5 +312,13 @@ export const projects = [
         description: " An app for finding developers by username on Github, built with MERN stack",
         preview: 'https://vibrant-carson-812949.netlify.app/',
         link: 'https://github.com/Mekarosi/open-flight-app'
+    },
+    {
+        iconUrl: summiz,
+        theme: 'btn-back-yellow',
+        name: 'Memories App',
+        description: " An app for registered users to upload picture and videos of memories, built with MERN stack",
+        preview: 'https://memories-app907.netlify.app/posts',
+        link: 'https://github.com/Mekarosi/memories_app'
     }
 ];
