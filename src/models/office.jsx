@@ -7,11 +7,12 @@ Title: gaming room FREE DOWNLOAD
 */
 
 import React, { useRef, useEffect, useState } from "react";
+import officeScene from '../assets/3d/office.glb'
 import { useGLTF } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber"; 
 import { a } from '@react-spring/three'
 
-import officeScene from '../assets/3d/office.glb'
+
   
 
 const Office = ({ isRotating, setIsRotating,setCurrentStage, ...props }) => {
